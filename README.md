@@ -1,2 +1,2 @@
 # dotfiles
-for M1 apple silicon Mac
+Mac Personal Settings - M1 Apple Silicon  
