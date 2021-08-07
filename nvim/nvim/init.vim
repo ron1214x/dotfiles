@@ -15,6 +15,11 @@ Plug 'scrooloose/nerdcommenter'
 Plug 'christoomey/vim-tmux-navigator'
 
 Plug 'morhetz/gruvbox'
+Plug 'dracula/vim'
+Plug 'jnurmine/Zenburn'
+Plug 'gosukiwi/vim-atom-dark'
+Plug 'marko-cerovac/material.nvim'
+Plug 'altercation/vim-colors-solarized'
 
 Plug 'HerringtonDarkholme/yats.vim' " TS Syntax
 
@@ -60,6 +65,13 @@ command! -nargs=0 Prettier :CocCommand prettier.formatFile
 " ctrlp
 let g:ctrlp_user_command = ['.git/', 'git --git-dir=%s/.git ls-files -oc --exclude-standard']
 
+"python
+let g:python_host_prog='/usr/bin/python2'
+let g:python3_host_prog='/usr/bin/python3'
+
+"ruby
+let g:ruby_host_prog='/usr/bin/ruby'
+
 " j/k will move virtual lines (lines that wrap)
 noremap <silent> <expr> j (v:count == 0 ? 'gj' : 'j')
 noremap <silent> <expr> k (v:count == 0 ? 'gk' : 'k')
@@ -75,8 +87,15 @@ set expandtab
 set encoding=UTF-8
 set guifont=MesloLGS_NF\ 16
 set guifontwide=MesloLGS_NF\ 16
+set clipboard+=unnamedplus
 
-colorscheme gruvbox
+colorscheme material
+
+let g:material_style = 'oceanic'
+let g:material_italic_comments = v:true
+let g:material_italic_keywords = v:true
+let g:material_italic_functions = v:true
+let g:material_contrast = v:true
 
 " sync open file with NERDTree
 " " Check if NERDTree is open or active
@@ -229,6 +248,7 @@ nnoremap <silent> <space>j  :<C-u>CocNext<CR>
 nnoremap <silent> <space>k  :<C-u>CocPrev<CR>
 " Resume latest coc list
 nnoremap <silent> <space>p  :<C-u>CocListResume<CR>
-nnoremap <C-s> :w<CR>
+nnoremap <C-S> :w<CR>
 nnoremap <C-Q> :wq<CR>
 
+let g:nvim_python_log_file = '~/pylog/pylog.log'

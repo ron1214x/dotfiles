@@ -1,3 +1,4 @@
+eslint.showOutputChannel
 clangd.install
 clangd
 snippets.editSnippets
