@@ -1,1 +1,1 @@
-brew install lua5.3
+brew install lua
